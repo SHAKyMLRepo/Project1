@@ -27,13 +27,13 @@ In this project, I sourced publically available datasets with the necessary info
    - **Description** This dataset, PPR_ALL, was sourced from the Central Statistics Office (CSO) datasets. It provides a listing of all dwellings purchased by households in the residential property market in these years. Due to privacy however, precise details on house characteristics are not provided.
    - **Usage**: This dataset was used to give a baseline on the general trends in housing prices per county in Ireland over this timeframe. Main data fields used were the House Price, County and Dwelling type.
    - **Source Quality**: The data was sourced from the official CSO website, a reputable and trusted data provider.
-   - **Link**: [here]https://www.propertypriceregister.ie/website/npsra/pprweb.nsf/PPRDownloads?OpenForm&File=PPR-2020.csv&County=ALL&Year=2020&Month=ALL)*
+   - **Link**: [here](https://www.propertypriceregister.ie/website/npsra/pprweb.nsf/PPRDownloads?OpenForm&File=PPR-2020.csv&County=ALL&Year=2020&Month=ALL)*
 
 3. **Counties - OSi National Statutory Boundaries - 2019**
    - **Description** This dataset, was sourced from the offical government (data.gov.ie) datasets. It provides a detailed geographical boundary information for Irish counnties.
    - **Usage**: This dataset was used to find the area of Irish counties in km2. Main data fields used were the County and Area.
    - **Source Quality**: The data was sourced from the government website, a reputable and trusted data provider.
-   - **Link**: [here]([https://data.gov.ie/dataset/counties-osi-national-statutory-boundaries-20191/resource/66ed6ea5-a98c-4fd5-8185-7d21ca7f3bce)*
+   - **Link**: [here](https://data.gov.ie/dataset/counties-osi-national-statutory-boundaries-20191/resource/66ed6ea5-a98c-4fd5-8185-7d21ca7f3bce)*
 
 4. **Residential Property Prices for Ireland (QIEN628BIS)**
    - **Description** This dataset, was sourced from the Bank for International Settlements. This is a secondary source which according to source was collated from National sources, BIS Residential Property Price database.
