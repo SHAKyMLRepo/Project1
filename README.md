@@ -1,6 +1,6 @@
 # Project: House Price Prediction using population densities using Linear Regression
 
-![ML Banner](Images/mlbanner.jpg)
+![House Prediction](Images/house.jpg)
 
 ## Introduction
 
