@@ -33,13 +33,13 @@ In this project, I sourced publically available datasets with the necessary info
    - **Description** This dataset, was sourced from the offical government (data.gov.ie) datasets. It provides a detailed geographical boundary information for Irish counnties.
    - **Usage**: This dataset was used to find the area of Irish counties in km2. Main data fields used were the County and Area.
    - **Source Quality**: The data was sourced from the government website, a reputable and trusted data provider.
-   - **Link**: ([here][https://data.gov.ie/dataset/counties-osi-national-statutory-boundaries-20191/resource/66ed6ea5-a98c-4fd5-8185-7d21ca7f3bce)*
+   - **Link**: [here]([https://data.gov.ie/dataset/counties-osi-national-statutory-boundaries-20191/resource/66ed6ea5-a98c-4fd5-8185-7d21ca7f3bce)*
 
 4. **Residential Property Prices for Ireland (QIEN628BIS)**
    - **Description** This dataset, was sourced from the Bank for International Settlements. This is a secondary source which according to source was collated from National sources, BIS Residential Property Price database.
    - **Usage**: This dataset was used to find average house price inflation figures. Main data fields used were the Year and QIEN628BIS fields.
    - **Source Quality**: The data is a secondary source but was obtained from reputable institution.
-   - **Link**: [here]https://data.gov.ie/dataset/counties-osi-national-statutory-boundaries-20191/resource/66ed6ea5-a98c-4fd5-8185-7d21ca7f3bce](https://fred.stlouisfed.org/series/QIEN628BIS)*
+   - **Link**: [here](https://data.gov.ie/dataset/counties-osi-national-statutory-boundaries-20191/resource/66ed6ea5-a98c-4fd5-8185-7d21ca7f3bce](https://fred.stlouisfed.org/series/QIEN628BIS)*
    
 ### Data Preprocessing
 As this project could not use a prepared dataset as none was available with the information required regarding the Irish market, the Data Preprocessing stage was one of the most involved stage of this project. This involved tasks such as handling missing values, dealing with outliers, and removing unneeded data. As multiple datasets had to be combined it also required datasets formats to be synchronised before combination. The goal was to prepare the data for model development by ensuring it was clean and structured. For the data preparation, the Pandas and NumPy libraries were used.
