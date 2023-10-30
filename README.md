@@ -64,6 +64,8 @@ In this project, I sourced publically available datasets with the necessary info
 ### Data Preprocessing
 As this project could not use a prepared dataset as none was available with the information required regarding the Irish market, the Data Preprocessing stage was one of the most involved stage of this project. This involved tasks such as handling missing values, dealing with outliers, and removing unneeded data. As multiple datasets had to be combined it also required datasets formats to be synchronised before combination. The goal was to prepare the data for model development by ensuring it was clean and structured. For the data preparation, the Pandas and NumPy libraries were used.
 
+Access the preprocessing code [here](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/DataPreprocessing/DataProcessing.ipynb).
+
 1. **Read Data**: At this stage, each csv was transformed into a Panda DataFrame respecting the various encoding standards.
 2. **Data Exploration**: An initial exploration of the data was performed to establish the data types included and what were the necessary steps to form the final needed dataset for analysis. The .info() and .describe() methods were used to form a picture of a summary of the datasets included and some basic statistics.
 3. **Data Cleaning**:
