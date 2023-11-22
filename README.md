@@ -168,7 +168,7 @@ for county in counties:
 - **House Price Inflation Integration**: Property Price dataset was combined with QIEN628BIS on the "Year" and "Quarter" columns, ensuring that relevant economic data was added to property records.
 - **Census Data Integration**: Data from the census dataset was joined on "CensusYear" and "County" columns into output dataset adding Population data.
 - **County Area Integration**: County Area dataset was joined on "County" fields to add areas of county. This was added to calculate population density per county.
-- **Average House Prices**: Average House Prices dataset was joined on "County, Year" fields. This was added to gain more data on average house prices over the yeasr.
+- **Average House Prices**: Average House Prices dataset was joined on "County, Year" fields. This was added to gain more data on average house prices over the year.
 
 #### Changes to combined dataset before final output
 - **House Prices adjusted by House Size**: A column was added that adjusted house prices by house size to eliminate size difference from training data.
@@ -177,7 +177,50 @@ for county in counties:
 These merges resulted in a comprehensive dataset that combined property details, economic indicators, and population statistics.
         
 ### Model Development
-Implement a Linear Regression model using the machine learning library Scikit-Learn. Train the model on the prepared dataset to learn the relationships between the selected factors and house prices.
+
+#### Introduction
+This section implements a linear regression model using the Scikit-Learn library to predict first future populations and then house prices based on selected factors.
+
+#### Import Libraries
+The libraries used  include NumPy, Matplotlib, Pandas, and Scikit-Learn.
+
+#### Import Dataset
+The dataset is loaded from the processed CSV file, and the variables for prediction are set.
+
+#### Predict Population
+- Independent variable (X): `Year`
+- Dependent variables (y): `County`, `Population`
+
+##### Data Transformation
+- Reshape `Year` to a 2D array.
+- One-hot encode the categorical variable `County`.
+
+##### Train-Test Split
+Split the dataset into training and testing sets (80/20).
+
+##### Linear Regression Model
+- Create a linear regression model.
+- Train the model using the training data.
+
+##### Build a Pipeline
+Create a pipeline for data preprocessing and model training.
+
+##### Predictions
+- Predict population values on the test set.
+- Print coefficients and intercept.
+
+##### Evaluation
+Calculate the R-squared value to evaluate the model's performance.
+
+##### Make Predictions on New Data
+- Create a new DataFrame for prediction input.
+- Use the pipeline to predict house prices.
+
+#### Prediction Based on Population Density
+- Remove NaN rows.
+- Set variables for prediction: `Pop Density - Normal` (I) and `Price by House Size` (j).
+- Train a linear regression model on population density and predict house prices.
+- Calculate the R-squared value for evaluation.
 
 ### Model Evaluation
 Evaluate the performance of the Linear Regression model a subset of the data which will be held back during training.
