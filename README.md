@@ -71,6 +71,7 @@ In this project, I sourced publically available datasets with the necessary info
 <br>
 *Figure 6. This table shows the Maximum, Minimum and Mean house prices per County*
 <br>
+
 ### Data Preprocessing
 As this project could not use a prepared dataset as none was available with the information required regarding the Irish market, the Data Preprocessing stage was one of the most involved stage of this project. This involved tasks such as handling missing values, dealing with outliers, and removing unneeded data. As multiple datasets had to be combined it also required datasets formats to be synchronised before combination. The goal was to prepare the data for model development by ensuring it was clean and structured. For the data preparation, the Pandas and NumPy libraries were used.
 
