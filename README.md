@@ -40,6 +40,11 @@ In this project, I sourced publically available datasets with the necessary info
    - **Usage**: This dataset was used to find average house price inflation figures. Main data fields used were the Year and QIEN628BIS fields.
    - **Source Quality**: The data is a secondary source but was obtained from reputable institution.
    - **Link**: [here](https://fred.stlouisfed.org/series/QIEN628BIS)*
+5. **Average House Prices (HSQ06)**
+   - **Description** This dataset was sourced from the Department of Housing, Local Government, and Heritage. It contains the average house prices per county from 1975 to 2022.
+   - **Usage**: This dataset was used to extend the range of data on average house prices for more accuracte model predictions.
+   - **Source Quality**: The data was sourced from the government website, a reputable and trusted data provider.
+   - **Link**: [here]([https://fred.stlouisfed.org/series/QIEN628BIS](https://data.gov.ie/dataset/hsq06-average-price-of-houses/resource/eec93d2b-a0bf-4b59-bbbb-3839c95ac7e1))*
 
 ### Data Analysis
 
@@ -60,7 +65,12 @@ In this project, I sourced publically available datasets with the necessary info
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/88cff239-e476-41fc-a640-ce354b81b6fd)
 <br>
 *Figure 5. Preliminary analysis of the difference in house prices per growth in Population Density*
-
+<br>
+#### Max, Min and Mean House Prices per County
+![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/7ffaa5b2-19dc-4cfa-9c6f-ee00e52bf830)
+<br>
+*Figure 6. This table shows the Maximum, Minimum and Mean house prices per County*
+<br>
 ### Data Preprocessing
 As this project could not use a prepared dataset as none was available with the information required regarding the Irish market, the Data Preprocessing stage was one of the most involved stage of this project. This involved tasks such as handling missing values, dealing with outliers, and removing unneeded data. As multiple datasets had to be combined it also required datasets formats to be synchronised before combination. The goal was to prepare the data for model development by ensuring it was clean and structured. For the data preparation, the Pandas and NumPy libraries were used.
 
@@ -80,9 +90,10 @@ Access the preprocessing code [here](https://github.com/SHAKyMLRepo/Project1-Hou
 - **Price Column Cleaning**: Euro symbols and commas in the "Price (€)" column were removed, and the column was renamed to "Price." The data type was changed to float for numerical analysis.
 - **Language Standardisation**: Columns "Description of Property" and "Property Size Description" were cleaned and standardized. This involved translating Irish descriptions to English and removing irregular or non-standard entries.
 - **Splitting Data**: The dataset was filtered to include only new build properties as only these properties contained size descriptions which were needed for the later analsysis
-- **Data Binning**: Dates were split into quarters to align with the fiscal quarters and facilitate time-based analysis.
+- **Data Binning**: Dates were split into quarters to align with the fiscal quarters and facilitate time-based analysis. This was found not to join to other datasets well so was removed.
 - **Data Transformation** : Unnecessary columns, including "Date of Sale," "Address," "Eircode," and "Description of Property," were removed from the DataFrame.
 - **Standardise Capitalisation**: County values were capitalised to facilitate later merge conditions.
+- **Removed Second Hand House Rows**: Second hand houses were removed from dataset as they did not contain house size data which would skew results.
 
 #### Residential Property Prices for Ireland (QIEN628BIS)
 - **Normalization**: Data normalization was applied to the "QIEN628BIS" column from the secondary dataset. This ensured that values were on a common scale for meaningful analysis and comparison.
@@ -153,11 +164,16 @@ for county in counties:
 
 ```
     
-#### Combining Datasets into final output
+#### Combining Datasets
 - **House Price Inflation Integration**: Property Price dataset was combined with QIEN628BIS on the "Year" and "Quarter" columns, ensuring that relevant economic data was added to property records.
 - **Census Data Integration**: Data from the census dataset was joined on "CensusYear" and "County" columns into output dataset adding Population data.
 - **County Area Integration**: County Area dataset was joined on "County" fields to add areas of county. This was added to calculate population density per county.
-  
+- **Average House Prices**: Average House Prices dataset was joined on "County, Year" fields. This was added to gain more data on average house prices over the yeasr.
+
+#### Changes to combined dataset before final output
+- **House Prices adjusted by House Size**: A column was added that adjusted house prices by house size to eliminate size difference from training data.
+- **Population Density Normalised Column**: A column was added with normalised population density between 0 and 1 due to large disparity between Dublin and other counties.
+
 These merges resulted in a comprehensive dataset that combined property details, economic indicators, and population statistics.
         
 ### Model Development
