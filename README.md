@@ -57,21 +57,21 @@ In this project, I sourced publically available datasets with the necessary info
 
 #### Census Data
 ##### Chart Census Data over Time
-<p>Chart showing how Irish population is still recovering from the tragedy of famine and emigration. We can see the curve is exponential so this may mean Linear Regression may not work well at predicting values for this data.
+<p>Chart showing how Irish population is still recovering from the tragedy of famine and emigration. We can see the curve is exponential so this may mean Linear Regression may not work well at predicting values for this data.</p>
 <br>
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/ee173550-f0f1-4f32-bb62-399051d43f5d)
 <br>
 *Figure 1. Census data showing Ireland's population since 1851, we can see that Ireland's population is currently growing rapidly*
 <br>
 #### Chart Properties Sold per Year
-<p>This chart shows that House Sales have steadily increased from 2010. Also shows that 2023 contains only partial data so that an average price for this year might not reflect the full year's average.
+<p>This chart shows that House Sales have steadily increased from 2010. Also shows that 2023 contains only partial data so that an average price for this year might not reflect the full year's average.</p>
 <br>
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/5ff78600-11ab-4bb4-b20e-26e27a7797f1)
 <br>
 *Figure 2. Residential dataset visualisation showing growth of activity in the housing market since 2010*
 <br>
 #### Chart Mean Price per Year
-This chart shows that the average Price has increased steadily to 2023. The year average for 2023 is below 2022 which could indicate that having only partial data for that year is skewing the data or that house price increases have leveled off.
+<p>This chart shows that the average Price has increased steadily to 2023. The year average for 2023 is below 2022 which could indicate that having only partial data for that year is skewing the data or that house price increases have leveled off.</p>
 <br>
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/190ba365-35e9-4f16-ad06-2222c21b4f5d)
 <br>
