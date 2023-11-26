@@ -56,12 +56,15 @@ In this project, I sourced publically available datasets with the necessary info
 ### Data Analysis
 
 #### Census Data
+##### Chart Properties per Year
+<p>This chart shows that House Sales have steadily increased from 2010. Also shows that 2023 contains only partial data so that an average price for this year might not reflect the full year's average.
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/ee173550-f0f1-4f32-bb62-399051d43f5d)
 <br>
 *Figure 1. Census data showing Ireland's population since 1851, we can see that Ireland's population is currently growing rapidly*
 #### Residential Property Prices
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/5ff78600-11ab-4bb4-b20e-26e27a7797f1)
 <br>
+![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/190ba365-35e9-4f16-ad06-2222c21b4f5d)
 *Figure 2. Residential dataset visualisation showing growth of activity in the housing market since 2010*
 <br>
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/4158d788-0d8c-4ce1-9a5b-a8d729e2ee2e)
