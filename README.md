@@ -15,7 +15,8 @@ The real estate market is a dynamic and complex environment, and predicting hous
 To try out the code for yourself and see a more detailed explanation of its function, try out the Google Colab Links below:
 
 1. [Data Preprocessing](https://colab.research.google.com/drive/1O0BDkSqApAlUihn1o-W7g_keCeGRsqBL?usp=sharing)
-2. [Linear Regression]
+2. [Linear Regression](https://colab.research.google.com/drive/1xsDgkHmheVjv4oV-pRnDI0uP7H3eUYTQ?usp=sharing)
+   
 ## Key Components
 
 ### Data Sourcing 
