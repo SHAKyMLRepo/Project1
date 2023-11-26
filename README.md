@@ -59,49 +59,65 @@ In this project, I sourced publically available datasets with the necessary info
 ##### Chart Census Data over Time
 <p>Chart showing how Irish population is still recovering from the tragedy of famine and emigration. We can see the curve is exponential so this may mean Linear Regression may not work well at predicting values for this data.</p>
 <br>
+
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/ee173550-f0f1-4f32-bb62-399051d43f5d)
 <br>
+
 *Figure 1. Census data showing Ireland's population since 1851, we can see that Ireland's population is currently growing rapidly*
 <br>
-#### Chart Properties Sold per Year
+##### Chart Properties Sold per Year
 <p>This chart shows that House Sales have steadily increased from 2010. Also shows that 2023 contains only partial data so that an average price for this year might not reflect the full year's average.</p>
 <br>
+
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/5ff78600-11ab-4bb4-b20e-26e27a7797f1)
 <br>
 *Figure 2. Residential dataset visualisation showing growth of activity in the housing market since 2010*
 <br>
-#### Chart Mean Price per Year
+##### Chart Mean Price per Year
 <p>This chart shows that the average Price has increased steadily to 2023. The year average for 2023 is below 2022 which could indicate that having only partial data for that year is skewing the data or that house price increases have leveled off.</p>
 <br>
+
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/190ba365-35e9-4f16-ad06-2222c21b4f5d)
 <br>
 *Figure 3. Chart showing the average house price per year*
 <br>
-#### Standard Deviation of House Prices per Year
+##### Standard Deviation of House Prices per Year
 <p>This chart shows that the std dev for house prices has increased greatly in recent years. This means that in recent years the variability of houses prices from the mean has increased. This could signify volatility in the market or I suspect signifies that the difference in house prices between areas like Dublin and Cork and other less popular regions of the country has increased in recent years.
 <br>
-![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/190ba365-35e9-4f16-ad06-2222c21b4f5d)
-<br>
-*Figure 4. Chart showing standard deviation per year*
-<br>   
+   
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/9a20fcf5-e5e5-45f1-9d11-8d2f5954809c)
 <br>
-*Figure 3. Visualisation showing number of houses sold per county*
+*Figure 4. Chart showing standard deviation per year*
+<br>  
+##### Chart Properties Sold per County
+<p>This chart shows the difference in numbers of properties sold with Dublin and Cork far outweighting other areas which is unsurprising but may affect predictions due to the big disparity. This is why the addition of population density will be interesting to see if it can account for the difference in prices alone </p>
 <br>
-#### Population Density/ Price
-![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/88cff239-e476-41fc-a640-ce354b81b6fd)
+
+![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/3f5b0030-d41d-40de-bd1a-3d28b9c1467d)
 <br>
-*Figure 5. Preliminary analysis of the difference in house prices per growth in Population Density*
+*Figure 5. Visualisation showing number of houses sold per county*
 <br>
-#### Max, Min and Mean House Prices per County
+##### Chart Pop Density vs Average House Price
+<p> Population density vs Average House Price as a line chart. This show the large gap that exists in the visualisation where there is a large area where there are no data points due to the fact that the max population density overall is 1575.09 but if you exclude Dublin the next highest population density is 169.11.</p>
+<br>
+
+![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/def99519-0c08-4866-a694-ce7e24beba25)
+<br>
+*Figure 6. Preliminary analysis of the difference in house prices per growth in Population Density*
+<br>
+### Mean, Max and Min per County
+<p>Charting min max and mean House Prices per County. This charted shows that Dublin and counties close to Dublin have much higher average prices that counties far from Dublin. Also shows that the Minimum Prices are surprisely low, investigating why may be required</p>   
+
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/7ffaa5b2-19dc-4cfa-9c6f-ee00e52bf830)
 <br>
-*Figure 6. This table shows the Maximum, Minimum and Mean house prices per County*
+*Figure 7. This table shows the Maximum, Minimum and Mean house prices per County*
 <br>
 ### Chart Average Price / Population Density
 <p>This chart shows the ratio of Average Price / Population Density. This is showing that population density is not the only factor driving house prices, the effect of the Housing bubble can be seen as house prices crash after 2005.
+   
 ![image](https://github.com/SHAKyMLRepo/Project1-HousePricePrediction/assets/145592967/6ff07e13-c33e-4a6e-b21f-8531797ed956)
-
+<br>
+*Figure 8. This table shows the Average Price when divided by Population Density per Year*
 
 ### Data Preprocessing
 As this project could not use a prepared dataset as none was available with the information required regarding the Irish market, the Data Preprocessing stage was one of the most involved stage of this project. This involved tasks such as handling missing values, dealing with outliers, and removing unneeded data. As multiple datasets had to be combined it also required datasets formats to be synchronised before combination. The goal was to prepare the data for model development by ensuring it was clean and structured. For the data preparation, the Pandas and NumPy libraries were used.
